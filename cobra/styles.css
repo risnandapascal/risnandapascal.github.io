@@ -1,0 +1,231 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #E0F7FA;
+}
+
+.container {
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.logo-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* gaya untuk social media */
+.social-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #B2EBF2;
+    color: #333;
+}
+
+.join-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #B2EBF2;
+    color: #333;
+    animation: pulse 0.8s ease-in-out infinite;
+}
+
+.member-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.member {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    background-color: #B2EBF2;
+    /* border: 1px solid #e0e0e0; */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* .member:hover {
+    background-color: #fff;
+} */
+
+.member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.member:hover img {
+    transform: scale(1.2);
+}
+
+.member h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.member p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* Gaya untuk Tombol "Lihat Anggota Lainnya" */
+.view-more-button {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.view-more-button button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more-button button:hover {
+    background-color: #80DEEA;
+    color: #333;
+    /* animation: pulse 0.8s ease-in-out infinite; */
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.about-item {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+    padding: 20px;
+    background-color: #B2EBF2;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Tambahkan CSS untuk footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer button {
+    background-color: #B2EBF2;
+    color: #CFD8DC;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+footer button.show {
+    background-color: #B2EBF2;
+    color: #333;
+    opacity: 1;
+    visibility: visible;
+}
+
+footer button:hover {
+    color: #333;
+}
+
+/* Tambahkan aturan untuk smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+    .member {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-item {
+        width: 100%;
+    }
+}

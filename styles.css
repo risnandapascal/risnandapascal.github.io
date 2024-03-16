@@ -1,0 +1,163 @@
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+    background-color: #000;
+    color: #0f0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style-type: none; 
+    padding: 0;
+    text-align: center; 
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #0f0;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    background-color: #222;
+    padding: 8px 16px;
+    border-radius: 20px;
+  }
+  
+  nav ul li a:hover {
+    color: #0f0;
+    text-decoration: none;
+    background-color: #444;
+  }
+  
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0f0;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  
+  nav ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+  
+  section {
+    padding: 20px;
+    text-align: center; 
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  ul {
+    padding: 0;
+    list-style-type: none; 
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #0f0;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .profile-image {
+    text-align: center;
+  }
+  
+  .profile-image img {
+    border-radius: 50%;
+    width: 150px; 
+    height: 150px;
+    margin-bottom: 20px; 
+  }
+
+#projects {
+    background-color: #222;
+    padding: 20px;
+  }
+  
+  #projects ul {
+    padding: 0;
+  }
+  
+  #projects ul li {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  #projects ul li a {
+    background-color: #0f0;
+    display: block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #222;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out; 
+  }
+  
+  #projects ul li a:hover {
+    background-color: #444;
+    color: #0f0;
+  }
+
+/* Membuatnya menjadi rata kiri dan kanan*/
+@media screen and (min-width: 600px) {
+    #projects {
+      max-width: 600px;
+      margin: 0 auto; /* Membuatnya menjadi rata kiri dan kanan */
+    }
+  }
+
+  /* Media Queries for Responsive Design */
+  @media screen and (max-width: 600px) {
+    header {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 24px;
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 0;
+      padding: 10px 0;
+    }
+  
+    section {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  }
+  
